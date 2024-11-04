@@ -1,0 +1,84 @@
+<!-- clients.html -->
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Clients List</title>
+    <link rel="stylesheet" href="../static/styles/client.css">
+    <script defer src="../static/scripts/clients.js"></script>
+</head>
+<header>
+    <div class="header">
+        <h1></h1>
+        <img src="../static/images/logo_white_al.png" alt="AutoLink Logo" class="logo">
+    </div>
+</header>
+<body>
+
+    <div class="sidebar-button-container">
+        <button class="minimize-button">
+            <img src="../static/images/min-button.png" class="minimize-button-img">
+            <img src="../static/images/max-button.png" class="maximize-button-img" style="display: none;">
+        </button>
+    </div>
+
+    <div class="sidebar">
+        <a href="/queue" class="active">Dashboard</a>
+        <a href="/clients" class="active">Clients</a>
+        <a href="/about" class="active">About</a>
+        <a href="/login" class="logout"><button class="logout-button"><img src="../static/images/logout-button.png" class="logout-button-img"></button></a>
+    </div>
+
+    <div id="popup-alert" class="popup">
+        <span id="popup-message"></span>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <div class="content">
+        <div class="new-button-container">
+            <a href="/create-client"><button class="new_button">+ Add New </button></a>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-box" placeholder="Search by name, model, or license plate">
+            <button id="search-button" class="search-button">Search</button>
+        </div>
+        <h1 class="client-list-text">Client List</h1>
+        <div class="table-container">
+            <table id="clients-table" class="table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Model</th>
+                        <th>License Plate</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Client rows will be populated here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var sidebar = document.querySelector('.sidebar');
+            var button = document.querySelector('.minimize-button');
+            var minImg = document.querySelector('.minimize-button-img');
+            var maxImg = document.querySelector('.maximize-button-img');
+
+            button.addEventListener('click', function() {
+                sidebar.classList.toggle('minimized');
+
+                if (sidebar.classList.contains('minimized')) {
+                    minImg.style.display = 'none';
+                    maxImg.style.display = 'block';
+                } else {
+                    minImg.style.display = 'block';
+                    maxImg.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

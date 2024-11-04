@@ -1,0 +1,15 @@
+services:
+
+  api:
+    platform: linux/amd64
+    build:
+      context: ./
+      args:
+        - install_dev_packages=1
+    restart: always
+    volumes:
+      - ./api:/app/api
+    ports:
+      - 8080:8080
+    env_file:
+      - ./envs/local.env

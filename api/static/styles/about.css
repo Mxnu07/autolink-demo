@@ -1,0 +1,186 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/autolink-landing.png') no-repeat center center;
+    color: white;
+    background-size: cover;
+    height: 115vh;
+    overflow: hidden; /* Prevent scrollbars during the transition */
+}
+
+.content h1{
+    background-color: rgba(0, 0, 0, 0.744);
+    padding: 20px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: small;
+    width: 25%;
+}
+
+p {
+    background-color: rgba(0, 0, 0, 0.744);
+    padding: 20px;
+    border-radius: 25px;
+    text-align: left;
+    font-size: small;
+    width: 75%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content {
+    max-width: 50%;
+    margin-top: -55px;
+}
+
+.content h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.content p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+.content button {
+    background-color: #0000ff;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.content button:hover {
+    background-color: #0b0bae;
+}
+
+.phone-image img {
+    max-width: 300px;
+    margin-left: 20px;
+    margin-top: -200px;
+}
+
+footer {
+    background-color: #ffffff;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    width: 100%;
+    background-color: rgba(250, 250, 250, 0.151); /* Light background with transparency */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar-logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-item {
+    margin-left: 20px;
+}
+
+.navbar-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.navbar-link:hover {
+    color: #ddd;
+}
+
+/* Add some top padding to the content to prevent it from being hidden behind the navbar */
+.content {
+    padding-top: 80px; /* Adjust this value if your navbar height changes */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 100px 20px 20px 20px; /* Add some padding to the top to accommodate the navbar */
+}
+
+
+.queue-image {
+    max-width: 40%;
+    height: auto;
+    position: relative;
+    top: -575px;
+    left: 850px;
+    border-radius: 25px;
+    max-width: 90%;
+}
+

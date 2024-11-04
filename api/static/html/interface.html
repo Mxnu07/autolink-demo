@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue and Ongoing Services</title>
+    <link rel="stylesheet" href="../static/styles/interface.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="../static/images/logo_white_al.png" alt="AutoLink Logo" class="logo">
+        </header>
+        <table class="q-table">
+            <caption class="q-text">Queue</caption>
+            <thead>
+                <tr>
+                    <th>Client's Name</th>
+                    <th>Vehicle Model</th>
+                    <th>License Plate</th>
+                </tr>
+            </thead>
+            <tbody id="queue-table-body">
+                <!-- Queue items will be populated here -->
+            </tbody>
+        </table>
+
+        <table class="o-table">
+            <caption class="o-text">Ongoing Services</caption>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Vehicle</th>
+                    <th>License Plate</th>
+                    <th>Service</th>
+                    <th>Timer</th>
+                </tr>
+            </thead>
+            <tbody id="ongoing-services-table-body">
+                <!-- Ongoing services items will be populated here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="../static/scripts/interface.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Client</title>
+    <link rel="stylesheet" href="../static/styles/client_styles.css">
+    <script defer src="../static/scripts/create_client.js"></script>
+</head>
+<header>
+    <img src="../static/images/logo_icon_al.png" alt="AutoLink Logo" class="logo">
+</header>
+<body>
+    <div class="container">
+        <h1>Add Client</h1>
+        <form id="create-client-form">
+            <div class="form-section">
+                <div class="form-group1">
+                    <h2 class="client-txt">Client</h2>
+                    <input type="text" id="first-name" placeholder="First Name" required>
+                    <input type="text" id="last-name" placeholder="Last Name" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="text" id="phone-number" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group2">
+                    <h2>Vehicle</h2>
+                    <input type="text" id="license-plate" placeholder="License Plate" required>
+                    <input type="text" id="make" placeholder="Make" required>
+                    <input type="text" id="mileage" placeholder="Mileage" required>
+                    <input type="text" id="model" placeholder="Model" required>
+                    <input type="text" id="year" placeholder="Year" required>
+                </div>
+            </div>
+            <div class="button-container">
+                <button type="submit" class="submit-button">Create</button>
+            </div>
+        </form>
+        <div class="see-clients">
+            <a href="/clients"><button>See Clients</button></a>
+        </div>
+</body>
+</html>

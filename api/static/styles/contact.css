@@ -1,0 +1,123 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #1d1f27;
+    color: #fff;
+}
+
+.team-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.team-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.member-name {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.member-role {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.linkedin-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #0e76a8; /* LinkedIn color */
+    text-decoration: none;
+}
+
+.linkedin-link:hover {
+    text-decoration: underline;
+}
+
+.member-bio {
+    font-size: 1rem;
+    color: #ccc;
+    margin: 10px 0;
+    text-align: center; /* Optional: Align text to the left for better readability */
+}
+
+.member-email {
+    font-size: 1rem;
+    color: #ccc;
+    margin-top: 5px;
+}
+
+.navbar {
+    width: 100%;
+    background-color: rgba(250, 250, 250, 0.151); /* Light background with transparency */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar-logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-item {
+    margin-left: 20px;
+}
+
+.navbar-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.navbar-link:hover {
+    color: #ddd;
+}
+
+/* Add some top padding to the content to prevent it from being hidden behind the navbar */
+.content {
+    padding-top: 80px; /* Adjust this value if your navbar height changes */
+}

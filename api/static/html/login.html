@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../static/styles/login_styles.css">
+    <script defer src="../static/scripts/login.js"></script>
+</head>
+<header>
+    <img src="../static/images/logo_icon_al.png" alt="AutoLink Logo" class="logo">
+</header>
+<body>
+    <div class="login-container">
+        <h1>Welcome!</h1>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+            <br>
+            <br>
+            <a class="additional-links" href="/create_user">Create Account</a>
+            <a class="additional-links" href="/create_agent">Create Account</a>
+        </form>
+        <p id="error-message"></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../static/styles/styles.css">
+    <script defer src="../static/scripts/dashboard.js"></script>
+</head>
+<body>
+    <div class="sidebar-button-container">
+        <button class="minimize-button">
+            <img src="../static/images/min-button.png" class="minimize-button-img">
+            <img src="../static/images/max-button.png" class="maximize-button-img" style="display: none;">
+        </button>
+    </div>
+
+    <div class="sidebar">
+        <a href="#" class="active">Dashboard</a>
+        <a href="/create-client" class="addnew-button">Add New</a>
+        <a href="/clients" class="clients-button">Clients</a>
+        <a href="/about" class="about-button">About</a>
+        <a href="/login" class="logout"><button class="logout-button"><img src="../static/images/logout-button.png" class="logout-button-img"></button></a>
+    </div>
+
+    <div id="popup-alert" class="popup">
+        <span id="popup-message"></span>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <div class="content">
+        <div class="header">
+            <h1></h1>
+            <img src="../static/images/logo_white_al.png" alt="AutoLink Logo" class="logo">
+        </div>
+
+        <div class="stats">
+            <div class="stat-box">
+                <h2 id="queue-count">0</h2>
+                <p>Queue</p>
+            </div>
+            <div class="stat-box">
+                <h2 id="visits-count">0</h2>
+                <p>Visits</p>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <h3 class="ongoing-services-tag">Ongoing Services</h3>
+            <table id="ongoing-services-table" class="table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Vehicle</th>
+                        <th>License Plate</th>
+                        <th>Service</th>
+                        <th>Timer</th>
+                        <th>Status</th>
+                        <th>Update</th>
+                    </tr>
+                </thead>
+                <tbody id="ongoing-services-table-body">
+                    <!-- Rows will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-container">
+            <h3 class="queue-list-tag">Queue</h3>
+            <table id="queue-table" class="table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Vehicle</th>
+                        <th>License Plate</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="queue-table-body">
+                    <!-- Rows will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var sidebar = document.querySelector('.sidebar');
+            var button = document.querySelector('.minimize-button');
+            var minImg = document.querySelector('.minimize-button-img');
+            var maxImg = document.querySelector('.maximize-button-img');
+
+            button.addEventListener('click', function() {
+                sidebar.classList.toggle('minimized');
+
+                if (sidebar.classList.contains('minimized')) {
+                    minImg.style.display = 'none';
+                    maxImg.style.display = 'block';
+                } else {
+                    minImg.style.display = 'block';
+                    maxImg.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,403 @@
+
+
+body {
+    background-image: url('../images/autolink-lobby-img.png');
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eaeaf9;
+    overflow-x:hidden;
+    display: flex;
+    height: 100vh;
+}
+
+.new-button-container .new_button {
+    background-color: #008000; /* Regular state color (green) */
+    color: white; /* Text color */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    padding: 20px 30px; /* Adjust as needed */
+    font-size: large;
+}
+
+.new-button-container .new_button:hover {
+    background-color: #004d00; /* Hover state color (darker green) */
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#search-box {
+    width: 50%; /* Adjust as needed */
+    padding: 10px 20px;
+    font-size: 18px; /* Adjust as needed */
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.client-list-text {
+    background-color: rgba(0, 0, 0, 0.744);
+    padding: 15px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: large;
+    width: 10%;
+    color: white;
+}
+
+#search-button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 18px; /* Adjust as needed */
+    border: none;
+    border-radius: 5px;
+    background-color: #0000ff; /* Adjust as needed */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-button:hover {
+    background-color: #0056b3;
+    transition: background-color 0.3s ease; /* Adjust as needed */
+}
+
+
+button {
+    background-color: #0000ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.content button:hover {
+    background-color: #0056b3;
+    transition: background-color 0.3s ease;
+}
+
+
+.sidebar {
+    top: 150px;
+    width: 200px;
+    left: -200px;
+    height: 50vh;
+    border-radius: 25px;;
+    background-color: hwb(240 2% 28%);
+    padding-top: 50px;
+    position: relative;
+    animation: slideIn 0.8s forwards;
+    transition: width 0.8s ease;
+    z-index: 0;
+    overflow-y: auto;
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: rgb(249, 254, 255);
+    font-size: 18px;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards 0.5s;
+    margin-top: 20px;
+}
+
+.sidebar .active:hover {
+    background-color: #93aef9;
+}
+
+.sidebar .about-button:hover {
+    background-color: #93aef9;
+}
+
+.sidebar .addnew-button:hover {
+    background-color: #93aef9;
+}
+
+.sidebar .clients-button:hover {
+    background-color: #93aef9;
+}
+
+.sidebar .active {
+    font-weight: bold;
+    display: block;
+}
+
+
+
+.sidebar .logout {
+    position: absolute;
+    bottom: 25px;
+    left: -20px;
+}
+
+.logout-button {
+    width: 10px;
+    height: 10px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.logout-button-img {
+    width: 100px;
+    height: 60px;
+}
+
+.sidebar .logout-button-img:hover {
+    color: transparent;
+}
+
+.toggle-button {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.button-image {
+    width: 50px;
+    height: auto;
+}
+
+.button-image-clicked {
+    width:50px;
+    height: auto;
+    display: none;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.content {
+    margin-left: 20px;
+    overflow: auto;
+    scrollbar-width: none;
+    padding: 20px;
+    height: 100vh;
+    width: 100%;
+    transition: transform 0.5s ease;
+    flex-grow: 1;
+    padding-top: 150px;
+}
+
+.header {
+    width: 100%;
+    top: 0;
+    left:0;
+    background-color: hwb(240 2% 28%);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards 1s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    overflow-x:hidden;
+}
+
+header .logo {
+    right: -5px;
+    width: 200px; /* Adjust this value to the size you want */
+    height: auto;
+    animation: rotateIn 1s forwards;
+    position: absolute;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    background-color: white;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid hwb(240 2% 28%);
+    padding: 10px;
+    text-align: left;
+}
+
+
+th {
+    background-color: hwb(240 2% 28%);
+    color: white;
+}
+
+
+select {
+    width: 100%;
+    padding: 5px;
+}
+
+@keyframes slideIn {
+    to {
+        left: 0;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rotateIn {
+    from {
+        transform: rotate(-360deg);
+    }
+    to {
+        transform: rotate(0);
+    }
+}
+
+
+.add-client-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.add-client-container h2 {
+    margin-bottom: 10px;
+}
+
+.add-client-container form {
+    display: inline-block;
+}
+
+.add-client-container input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-client-container button {
+    padding: 10px 20px;
+    background-color: #0000ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-client-container button:hover {
+    background-color: #0000cc;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-button {
+    margin-bottom: 20px;
+    position: relative;
+    top: 5px;
+    height: 50px;
+    padding: 0;
+    border: none;
+    background: none;
+    width: 100%;
+}
+
+.minimize-button {
+    position: absolute;
+    width: 53px;
+    height: 40px;
+    top: 155px;
+    left: -6px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.minimize-button-img {
+    width: 60px;
+    height: 35px;
+    display: block;
+}
+
+.maximize-button-img {
+    width: 75px;
+    height: 40px;
+    top: 1px;
+    left: -7px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 1;
+    position: absolute;
+}
+
+.sidebar.minimized .minimize-button-img {
+    display: none;
+}
+
+.sidebar.minimized .maximized-button-img {
+    left: -10px;
+    display: block;
+}
+
+
+.sidebar.minimized {
+    width: 50px;
+}
+
+.sidebar.minimized a {
+    display: none;
+}
+@keyframes colorChange {
+    0% { background-color: initial; }
+    20% { background-color: green; }
+    80% { background-color: green; }
+    100% { background-color: initial; }
+}
+
+.add-to-queue-button:active {
+    animation: colorChange 0.5s ease;
+    transition: colorChange 0.5s pause;
+}
+
+.search-button:active {
+    animation: colorChange 0.5s ease;
+    transition: colorChange 0.5s pause;
+}
+
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    bottom: 20px; /* 20px from the bottom */
+    right: 20px; /* 20px from the right */
+    padding: 20px; /* Some padding */
+    background-color:#0000cc; /* Yellow background */
+    color: white; /* Black text color */
+    border: 1px solid #ccc; /* Some border */
+    border-radius: 20px; /* Rounded corners */
+    z-index: 1000; /* Make sure it is above other elements */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add some shadow */
+}
+
+.popup button {
+    background: none;
+    border: none;
+    color: #fcfcfc;
+    font-weight: bold;
+    margin-left: 10px;
+    cursor: pointer;
+}
